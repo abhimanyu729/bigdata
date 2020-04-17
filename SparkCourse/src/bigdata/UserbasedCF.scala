@@ -95,8 +95,8 @@ object UserbasedCF {
         }, 
         
         (a,b) => math.min(a,b) ).cache()
-    
-    // Print out the first 100 results:
+   
+   // Print out the first 100 results:
     val dist = bfs.vertices.join(verts).take(100).filter(x => !x._2._1.toString().equals("Infinity"))
     
     for(x <- dist){
@@ -104,7 +104,19 @@ object UserbasedCF {
       val user = x._2._2
       println(s"The distance of user $user from 318 is $distance")
     }
-    bfs.vertices.join(verts).take(1000).foreach(println)
+    
+    //distance of user 50 from 318 
+    
+    bfs.vertices.join(verts).filter(x => x._2._1 == 50).foreach(println)
+    
+    
+      // snippet to calculate the RMSE for the test set
+   val evaluator = new RegressionEvaluator()
+                  .setMetricName("rmse")
+                  .setLabelCol("rating")
+                  .setPredictionCol("prediction")
+                  
+println(s"Using ALS the Root-mean-square error is $evaluator")
     
     
     }
