@@ -1,5 +1,5 @@
 Movie Recommender System:
-Movie recommender system is a system that predicts  movie  that the user would like to watch based on the movie previously watched and rated by the user.We have built movie recommendation system by implementing User-User based collaborative filtering, Item-Item based collaborative filtering and Alternating least square(ALS) algorithm.
+Movie recommender system predicts  movie  that the user would like to watch based on the movie previously watched and rated by the user.We have built movie recommendation system by implementing User-User based collaborative filtering, Item-Item based collaborative filtering and Alternating least square(ALS) algorithm.
 At last we will then compare three different approaches as mentioned above to find out which approach works the best to recommend movie to users from movie lens dataset based on the RMSE score of each technique.We have used big data technology for faster processing of large dataset.The data set  which we used for the movie recommender system is Movie Lens (ml-25m) dataset.
 
 Dataset and file used:
